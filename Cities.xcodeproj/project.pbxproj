@@ -16,6 +16,13 @@
 		412CACDC25C45C40007ECDD2 /* CityCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CACDB25C45C40007ECDD2 /* CityCollectionViewController.swift */; };
 		412CACDF25C45DD7007ECDD2 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CACDE25C45DD7007ECDD2 /* City.swift */; };
 		412CACE325C5984A007ECDD2 /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CACE225C59849007ECDD2 /* CityDetailViewController.swift */; };
+		5D9CB37C2ADF2B73004CB847 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 5D9CB3752ADF2B73004CB847 /* Podfile.lock */; };
+		5D9CB37D2ADF2B73004CB847 /* ImageClassificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9CB3762ADF2B73004CB847 /* ImageClassificationHelper.swift */; };
+		5D9CB37E2ADF2B73004CB847 /* model-2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 5D9CB3772ADF2B73004CB847 /* model-2.tflite */; };
+		5D9CB37F2ADF2B73004CB847 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5D9CB3782ADF2B73004CB847 /* Podfile */; };
+		5D9CB3802ADF2B73004CB847 /* model.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D9CB3792ADF2B73004CB847 /* model.json */; };
+		5D9CB3812ADF2B73004CB847 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 5D9CB37A2ADF2B73004CB847 /* model.tflite */; };
+		5D9CB3822ADF2B73004CB847 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 5D9CB37B2ADF2B73004CB847 /* Pods */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		412CACDB25C45C40007ECDD2 /* CityCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewController.swift; sourceTree = "<group>"; };
 		412CACDE25C45DD7007ECDD2 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		412CACE225C59849007ECDD2 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
+		5D9CB3752ADF2B73004CB847 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		5D9CB3762ADF2B73004CB847 /* ImageClassificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationHelper.swift; sourceTree = "<group>"; };
+		5D9CB3772ADF2B73004CB847 /* model-2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "model-2.tflite"; sourceTree = "<group>"; };
+		5D9CB3782ADF2B73004CB847 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		5D9CB3792ADF2B73004CB847 /* model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = model.json; sourceTree = "<group>"; };
+		5D9CB37A2ADF2B73004CB847 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
+		5D9CB37B2ADF2B73004CB847 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +60,13 @@
 		412CACB625C44F96007ECDD2 = {
 			isa = PBXGroup;
 			children = (
+				5D9CB3762ADF2B73004CB847 /* ImageClassificationHelper.swift */,
+				5D9CB3772ADF2B73004CB847 /* model-2.tflite */,
+				5D9CB3792ADF2B73004CB847 /* model.json */,
+				5D9CB37A2ADF2B73004CB847 /* model.tflite */,
+				5D9CB3782ADF2B73004CB847 /* Podfile */,
+				5D9CB3752ADF2B73004CB847 /* Podfile.lock */,
+				5D9CB37B2ADF2B73004CB847 /* Pods */,
 				412CACC125C44F96007ECDD2 /* Cities */,
 				412CACC025C44F96007ECDD2 /* Products */,
 			);
@@ -133,8 +154,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9CB37F2ADF2B73004CB847 /* Podfile in Resources */,
 				412CACCF25C44F98007ECDD2 /* LaunchScreen.storyboard in Resources */,
+				5D9CB3822ADF2B73004CB847 /* Pods in Resources */,
+				5D9CB3802ADF2B73004CB847 /* model.json in Resources */,
+				5D9CB3812ADF2B73004CB847 /* model.tflite in Resources */,
+				5D9CB37E2ADF2B73004CB847 /* model-2.tflite in Resources */,
 				412CACCC25C44F98007ECDD2 /* Assets.xcassets in Resources */,
+				5D9CB37C2ADF2B73004CB847 /* Podfile.lock in Resources */,
 				412CACCA25C44F96007ECDD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +176,7 @@
 				412CACC325C44F96007ECDD2 /* AppDelegate.swift in Sources */,
 				412CACDF25C45DD7007ECDD2 /* City.swift in Sources */,
 				412CACDC25C45C40007ECDD2 /* CityCollectionViewController.swift in Sources */,
+				5D9CB37D2ADF2B73004CB847 /* ImageClassificationHelper.swift in Sources */,
 				412CACD925C45C1F007ECDD2 /* CityCollectionViewCell.swift in Sources */,
 				412CACE325C5984A007ECDD2 /* CityDetailViewController.swift in Sources */,
 				412CACC525C44F96007ECDD2 /* SceneDelegate.swift in Sources */,
