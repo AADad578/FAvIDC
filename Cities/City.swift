@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PhotosUI
 struct City {
     var image:UIImage!
     var name:String = ""

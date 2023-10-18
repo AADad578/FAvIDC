@@ -13,13 +13,18 @@ import SwiftUI
 
 private let reuseIdentifier = "Cell"
 
-class CityCollectionViewController: UICollectionViewController {
+class CityCollectionViewController: UICollectionViewController,PHPickerViewControllerDelegate {
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue){
         
     }
-    
-    private var cities : [City]!
+    static func emptyImage(with size: CGSize) -> UIImage? {
+            UIGraphicsBeginImageContext(size)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return image
+        }
+    private var cities : [City] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,19 +67,47 @@ class CityCollectionViewController: UICollectionViewController {
                 self.inferenceResult = result
                 let strings = self.displayStringsForResults(atRow: 0, result:result!)
                 self.labels.append(strings)
-                self.cities.append(City(image: self.images., name: strings))
+                self.cities.append(City(image: self.images.last!, name: strings.0))
+                
+                self.collectionView.reloadData()
                 // Create a new alert
-//                var dialogMessage = UIAlertController(title: "Results", message: ((self.labels.last?.0 ?? "No Result")+": "+(self.labels.last?.1 ?? "")), preferredStyle: .alert)
-//
-//                // Present alert to user
+//                var dialogMessage = UIAlertController(title: "Results", message: String(self.cities.isEmpty), preferredStyle: .alert)
+////
+////                // Present alert to user
 //                self.present(dialogMessage, animated: true, completion: nil)
-                self.myCollectionViewController.dataSource.insert(self.textToImage(drawText: strings.0, inImage: self.images.last!, atPoint: CGPointMake(100,200)), at: 0)
+//                self.myCollectionViewController.dataSource.insert(self.textToImage(drawText: strings.0, inImage: self.images.last!, atPoint: CGPointMake(100,200)), at: 0)
                 
                 
                                 
             }
 
         }
+    }
+    private var imageClassificationHelper: ImageClassificationHelper? =
+    ImageClassificationHelper(modelFileInfo: (name:"model-2",extension:"tflite"))
+    var inferenceResult: ImageClassificationResult?=nil
+    func buffer(from image: UIImage) -> CVPixelBuffer? {
+        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+        var pixelBuffer : CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(image.size.width), Int(image.size.height), kCVPixelFormatType_32BGRA, attrs, &pixelBuffer)
+        guard (status == kCVReturnSuccess) else {
+            return nil
+        }
+      CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+      let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
+
+      let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+      let context = CGContext(data: pixelData, width: Int(224), height: Int(224), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
+
+      context?.translateBy(x: 0, y: image.size.height)
+      context?.scaleBy(x: 1.0, y: -1.0)
+
+      UIGraphicsPushContext(context!)
+      image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+      UIGraphicsPopContext()
+      CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+
+      return pixelBuffer
     }
     func displayStringsForResults(atRow row: Int, result inferenceResult: ImageClassificationResult) -> (String, String) {
         var fieldName: String = ""
@@ -129,10 +162,11 @@ class CityCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         
-        let city = cities[indexPath.row]
-        cell.cityImageView.image = UIImage(named: city.image)
+        let city = self.cities[indexPath.row]
+        cell.cityImageView.image = city.image
         cell.cityNameLabel.text = city.name
-    
+        
+                
         return cell
     }
     

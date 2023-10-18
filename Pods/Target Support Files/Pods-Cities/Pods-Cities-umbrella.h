@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_FAvIDC_CheckerVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_FAvIDC_CheckerVersionString[];
+FOUNDATION_EXPORT double Pods_CitiesVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_CitiesVersionString[];
 

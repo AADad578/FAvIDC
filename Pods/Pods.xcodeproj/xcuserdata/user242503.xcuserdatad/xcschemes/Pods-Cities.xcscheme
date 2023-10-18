@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8EB2861D13D861F59DA04C1B842B0817"
-               BuildableName = "Pods_FAvIDC_Checker.framework"
-               BlueprintName = "Pods-FAvIDC Checker"
+               BlueprintIdentifier = "E5501AD3F9BF195EAB00F75E61B9845B"
+               BuildableName = "Pods_Cities.framework"
+               BlueprintName = "Pods-Cities"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

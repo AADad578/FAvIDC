@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x2x-U2-g2E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x2x-U2-g2E">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cities-->
+        <!--Images-->
         <scene sceneID="ImD-Ep-VJ6">
             <objects>
                 <collectionViewController id="alk-op-gcw" customClass="CityCollectionViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +71,7 @@
                             <outlet property="delegate" destination="alk-op-gcw" id="jtw-sF-UMX"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Cities" id="q0E-Aw-Dtr"/>
+                    <navigationItem key="navigationItem" title="Images" id="q0E-Aw-Dtr"/>
                     <connections>
                         <segue destination="HLD-wU-wXN" kind="presentation" identifier="showDetail" id="dXu-U4-P9v"/>
                     </connections>
@@ -84,11 +85,11 @@
             <objects>
                 <viewController id="HLD-wU-wXN" customClass="CityDetailViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qa6-Kc-wgQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qah-Ji-nHN">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="No5-Hd-pXI">
                                 <rect key="frame" x="374" y="10" width="30" height="30"/>
@@ -101,6 +102,13 @@
                                     <segue destination="wit-wr-LJw" kind="unwind" unwindAction="unwindToMainWithSegue:" id="Rfl-tj-A2Y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-ay-qho">
+                                <rect key="frame" x="154" y="612" width="106" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xQ1-fZ-YAv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -115,12 +123,13 @@
                     </view>
                     <connections>
                         <outlet property="cityImageView" destination="qah-Ji-nHN" id="234-yN-tV2"/>
+                        <outlet property="cityNameLabel" destination="dEq-ay-qho" id="RYZ-wD-SFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c65-Yp-fHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wit-wr-LJw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="176"/>
+            <point key="canvasLocation" x="1314.4927536231885" y="175.44642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hnp-fd-exC">
@@ -128,7 +137,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x2x-U2-g2E" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9i4-Xb-U9P">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

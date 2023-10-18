@@ -12,11 +12,13 @@ class CityDetailViewController: UIViewController {
     var city: City?
     
     @IBOutlet var cityImageView:UIImageView!
+    @IBOutlet var cityNameLabel:UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cityImageView.image = UIImage(named: city?.image ?? "")
+        cityImageView.image = city?.image
+        cityNameLabel.text = city?.name
         
     }
     
