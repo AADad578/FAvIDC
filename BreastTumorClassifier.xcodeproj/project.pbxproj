@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		412CACBF25C44F96007ECDD2 /* Cities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cities.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		412CACBF25C44F96007ECDD2 /* BreastTumorClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreastTumorClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412CACC225C44F96007ECDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		412CACC425C44F96007ECDD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		412CACC925C44F96007ECDD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		412CACC025C44F96007ECDD2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				412CACBF25C44F96007ECDD2 /* Cities.app */,
+				412CACBF25C44F96007ECDD2 /* BreastTumorClassifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		412CACBE25C44F96007ECDD2 /* Cities */ = {
+		412CACBE25C44F96007ECDD2 /* BreastTumorClassifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 412CACD325C44F98007ECDD2 /* Build configuration list for PBXNativeTarget "Cities" */;
+			buildConfigurationList = 412CACD325C44F98007ECDD2 /* Build configuration list for PBXNativeTarget "BreastTumorClassifier" */;
 			buildPhases = (
 				71A9F92433E73B2124A391D9 /* [CP] Check Pods Manifest.lock */,
 				412CACBB25C44F96007ECDD2 /* Sources */,
@@ -124,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = Cities;
+			name = BreastTumorClassifier;
 			productName = Cities;
-			productReference = 412CACBF25C44F96007ECDD2 /* Cities.app */;
+			productReference = 412CACBF25C44F96007ECDD2 /* BreastTumorClassifier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 412CACBA25C44F96007ECDD2 /* Build configuration list for PBXProject "Cities" */;
+			buildConfigurationList = 412CACBA25C44F96007ECDD2 /* Build configuration list for PBXProject "BreastTumorClassifier" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,7 +156,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				412CACBE25C44F96007ECDD2 /* Cities */,
+				412CACBE25C44F96007ECDD2 /* BreastTumorClassifier */,
 			);
 		};
 /* End PBXProject section */
@@ -364,11 +364,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T2NHD72MA;
 				INFOPLIST_FILE = Cities/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Breast Tumor Classifier";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = hussrpAnkur.FAvIDCv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -385,11 +387,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T2NHD72MA;
 				INFOPLIST_FILE = Cities/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Breast Tumor Classifier";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = hussrpAnkur.FAvIDCv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -400,7 +404,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		412CACBA25C44F96007ECDD2 /* Build configuration list for PBXProject "Cities" */ = {
+		412CACBA25C44F96007ECDD2 /* Build configuration list for PBXProject "BreastTumorClassifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				412CACD125C44F98007ECDD2 /* Debug */,
@@ -409,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		412CACD325C44F98007ECDD2 /* Build configuration list for PBXNativeTarget "Cities" */ = {
+		412CACD325C44F98007ECDD2 /* Build configuration list for PBXNativeTarget "BreastTumorClassifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				412CACD425C44F98007ECDD2 /* Debug */,
